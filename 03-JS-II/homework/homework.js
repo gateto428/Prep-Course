@@ -31,17 +31,6 @@ function saludo(idioma) {
     // Si "idioma" es "ingles", devuelve "Hello!"
     // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
     // Tu código:
-
-    /*  switch (idioma) { //encendedor 
-          case "aleman":
-              return "Guten Tag!";
-          case "mandarin":
-              return "Ni Hao!";
-          case "ingles":
-              return "Hello!";
-          default:
-              return "Hola!";
-      }*/
     return idioma == "aleman" ? "Guten Tag!" :
         idioma == "mandarin" ? "Ni Hao!" :
         idioma == "ingles" ? "Hello!" : "Hola!";
