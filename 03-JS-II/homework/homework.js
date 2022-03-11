@@ -21,22 +21,7 @@ function conection(status) {
     //Cuando el estado es igual a 2, el usuario está "Away"
     //De lo contrario, presumimos que el usuario está "Offline"
     //Devolver el estado de conexión de usuario en cada uno de los casos.
-    switch (status) {
-        case 1:
-            return "Online";
-        case 2:
-            return "Away";
-        default:
-            return "Offline";
-    }
-    //
-    if (status == 1) {
-        return "Online";
-    } else if (status == 2) {
-        return "Away";
-    } else {
-        return "Offline";
-    }
+    return status === 1 ? "Online" : status === 2 ? "Away" : "Offline";
 }
 
 function saludo(idioma) {
@@ -47,16 +32,19 @@ function saludo(idioma) {
     // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
     // Tu código:
 
-    switch (idioma) { //encendedor 
-        case "aleman":
-            return "Guten Tag!";
-        case "mandarin":
-            return "Ni Hao!";
-        case "ingles":
-            return "Hello!";
-        default:
-            return "Hola!";
-    }
+    /*  switch (idioma) { //encendedor 
+          case "aleman":
+              return "Guten Tag!";
+          case "mandarin":
+              return "Ni Hao!";
+          case "ingles":
+              return "Hello!";
+          default:
+              return "Hola!";
+      }*/
+    return idioma == "aleman" ? "Guten Tag!" :
+        idioma == "mandarin" ? "Ni Hao!" :
+        idioma == "ingles" ? "Hello!" : "Hola!";
 }
 
 function colors(color) {
